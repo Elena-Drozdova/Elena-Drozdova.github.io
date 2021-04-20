@@ -1,0 +1,193 @@
+/* 
+1.Header
+2.Main
+    2.2.Dignity
+    2.3.Screenshots
+    2.4.Reviews
+    2.5.Buy
+3.Footer
+ */
+ .body-index {
+     max-width: 1920px;
+     margin: 0 auto;
+     font-family: Raleway-ExtraBold,AdobeInvisFont,MyriadPro-Regular;
+ }
+
+
+ /* ==========================================================  1.Header  ========================================================== */
+
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: linear-gradient( rgba(27, 13, 3, 0.5), rgba(0, 0, 0, 0.3) ), url(../img/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #32373D;
+}
+.main-header-top {
+    display: flex;
+    margin: 0 375px 0 375px;
+}
+.main-header-top-logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-top: 40px;
+    color: #FFFFFF;
+}
+.main-header-top-logo:hover .logo-icon,
+.main-header-top-logo:hover .logo-txt {
+    color: #C7B299;
+}
+.main-header-top-logo:active .logo-icon,
+.main-header-top-logo:active .logo-txt{
+    color: #39241A;
+}
+.logo-icon {
+    fill: CurrentColor; 
+}
+.logo-txt {
+    text-decoration: none;
+    color: #FFFFFF;  
+    font-size: 34px;
+    font-family: Raleway-Regular,AdobeInvisFont,MyriadPro-Regular;
+}
+.main-header-top-nav {
+    padding-left: 220px;
+    padding-top: 62px;
+}
+.main-header-top-nav-item {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main-header-top-nav-list {
+    font-family: Raleway-Medium,Montserrat-Light,AdobeInvisFont,MyriadPro-Regular;
+    font-size: 14px;
+    text-decoration: none;
+    padding-right: 30px;
+    color: #FFFFFF;
+}
+.header-list1:hover, 
+.header-list2:hover,
+.header-list3:hover,
+.header-list4:hover,
+.header-list5:hover,
+.header-list6:hover,
+.header-list7:hover,
+.header-list8:hover {
+    color: #C7B299;
+}
+.header-list1:active, 
+.header-list2:active,
+.header-list3:active,
+.header-list4:active,
+.header-list5:active,
+.header-list6:active,
+.header-list7:active,
+.header-list8:active {
+    color: #39241A;
+}
+.main-header-top-basket {
+    width: 20px;
+    height: 25px;
+    margin: 62px 27px 0 32px;
+    padding: 0;
+    border: none;
+    color: #FFFFFF;
+}
+.top-basket {
+    fill: CurrentColor;
+}
+.main-header-top-search {
+    background-image: url(../img/header-search.png);
+    width: 25px;
+    height: 25px;
+    margin-top: 62px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.main-header-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.main-header-bottom-btn {
+    position: relative;
+   
+  width: 40px;
+  height: 73px;
+  margin: 40px;
+}
+.main-header-bottom-btn::before {
+    content: "";
+    position: absolute;
+    
+    width: 52px;
+  height: 2px;
+  background-color: red;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main-header-bottom-title {
+   text-align: center; 
+   margin: 285px 300px 328px;
+}
+.main-header-bottom-title-desigion {
+    color: #FFFFFF;
+    font-size: 36px;
+    font-family: Raleway-ExtraBold,Raleway-Medium,AdobeInvisFont,MyriadPro-Regular;
+    margin: 0;
+    
+}
+.main-header-bottom-title-portfolio {
+    color: #FFFFFF;
+    font-size: 52px;
+    font-family: Raleway-ExtraBold,AdobeInvisFont,MyriadPro-Regular;
+    margin: 0;
+    padding: 15px 0 20px;
+}
+.main-header-bottom-text {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: Montserrat-Light,Raleway-Regular,AdobeInvisFont,MyriadPro-Regular;
+    margin: 0 0 75px 0;
+    max-width: 560px;
+}
+.main-header-bottom-started {
+    padding: 17px 34px;
+    background-color: #998675;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    border-bottom: 3px solid #4D4643;
+    border-radius: 5px;
+    box-sizing: border-box;
+    word-break: break-all;
+} 
+.main-header-bottom-started:hover {
+    background-color: #FFFFFF;
+    color: #998675;
+}   
+.main-header-bottom-started:active {
+    background-color: #4D4643;
+    color: #998675;
+}   
+.main-header-bottom-btn {
+    display: flex;
+    align-items: center;
+}
+.main-header-bottom-pagination {
+    display: flex;
+    width: 100%;
+}

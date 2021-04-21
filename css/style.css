@@ -1,11 +1,11 @@
 /* 
-1.Header
-2.Main
-    2.2.
-    2.3.
+1.header
+2.main
+    2.2 realization
+    2.3.multipurpose
     2.4.
     2.5.
-3.Footer
+3.footer
  */
  .body-index {
      max-width: 1920px;
@@ -14,7 +14,7 @@
  }
 
 
- /* ==========================================================  1.Header  ========================================================== */
+ /* ==========================================================  1.header  ========================================================== */
 
 
 .main-header {
@@ -233,6 +233,18 @@ input[type="search"]:focus {
     top: 36px;
     left: 0;
   }
+.btn-right:hover:after,
+.btn-right:hover:before,
+.btn-left:hover:after,
+.btn-left:hover:before {
+    background-color: #C7B299;
+  }
+.btn-right:active:after,
+.btn-right:active:before,
+.btn-left:active:after,
+.btn-left:active:before {
+    background-color: #39241A;
+  }
 .main-header-bottom-pagination {
     display: flex;
     justify-content: center;
@@ -255,4 +267,135 @@ input[type="search"]:focus {
     transform: scale(1.2)
 }
 
-/* ==========================================================  2.Main  ========================================================== */
+/* ==========================================================  2.main  ========================================================== */
+
+
+.design {
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF; 
+}
+.design-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 30px 112px;
+    box-sizing: border-box;
+    position: relative;
+}
+.design-card:after {
+    content: "";
+    display: block;
+    width: 71px;
+    height: 4px;
+    background-color: #F1EEE9;
+    top: 200px;
+    position: absolute;
+}
+.design-card:hover .design-img {
+    fill: #C7B299;
+}
+.design-card:hover .design-title {
+    color: #C7B299;
+}
+.design-card:hover:after {
+    background-color: #C7B299;
+}
+.design-img {
+    fill: #555555;
+}
+.design-title {
+    color: #555555;
+    font-family: Raleway-SemiBold,Raleway-Bold,AdobeInvisFont,MyriadPro-Regular;
+    font-size: 22px;
+    margin: 0;
+    padding: 30px 0 20px;
+}
+.text {
+    color: #8F8F8F;
+    font-family: Montserrat-Light,Raleway-Bold,AdobeInvisFont,MyriadPro-Regular;
+    font-size: 16px;
+    margin: 0;
+}
+.design-text {
+    font-size: 14px;
+    width: 267px;
+    text-align: center;  
+}
+
+/* ==========================================================  2.2 realization  ========================================================== */
+
+
+.realization {
+    background-color: #FBFAF8;
+}
+.realization-title {
+    font-family: Raleway-SemiBold,Raleway-Medium,AdobeInvisFont,MyriadPro-Regular;
+    font-size: 30px;
+    text-align: center;
+    color: #555555;
+    margin: 0;
+    padding: 84px 0 24px;
+}
+.realization-text {
+    width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+.realization-img {
+    width: 80%;
+    min-height: 450px;
+    background-image: url(../img/browser-center@1X.png), url(../img/browser-left@1X.png), url(../img/browser-right@1X.png);
+    background-repeat: no-repeat;
+    background-position: bottom center, bottom left, bottom right;
+    background-size: 51%, 50%, 50%;
+    margin: 0 auto;
+}
+.realization-img:hover {
+    background-image: url(../img/browser-left@1X.png), url(../img/browser-center@1X.png), url(../img/browser-right@1X.png);
+    background-size: 60%, 40%, 50%;
+}
+
+/* ==========================================================  2.3 multipurpose  ========================================================== */
+
+
+.multipurpose {
+    background: linear-gradient(90deg, #211C19 12.69%, #4D3227 100%);
+    display: flex;
+    justify-content: space-around;
+}
+.multipurpose-title {
+    margin: 0;
+    color: #FFFFFF;
+    font-family: Raleway-Medium,Raleway-Regular,AdobeInvisFont,MyriadPro-Regular;
+    font-size: 28px;
+    padding: 50px 0 8px;
+}
+.title-word {
+    color: #C3AE96;
+}
+.multipurpose-text {
+    margin: 0;
+    color: #605654;
+    font-family: Raleway-Medium,Montserrat-Light,AdobeInvisFont,MyriadPro-Regular;
+    font-size: 18px;
+    padding-bottom: 50px;
+}
+.multipurpose-link {
+    align-self: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #998675;
+    padding: 15px 22px;
+    border-bottom: 3px solid #736257;
+    border-radius: 5px;
+}
+.multipurpose-link:hover {
+    background-color: #FFFFFF;
+    color: #998675;
+}   
+.multipurpose-link:active {
+    background-color: #4D4643;
+    color: #998675;
+}   

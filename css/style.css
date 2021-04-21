@@ -7,10 +7,30 @@
     2.5.
 3.footer
  */
+ @font-face {
+     font-family: raleway-regular;
+     src: url(../fonts/raleway-regular.ttf);
+ }
+ @font-face {
+    font-family: raleway-medium;
+    src: url(../fonts/raleway-medium.ttf);
+}
+@font-face {
+    font-family: raleway-semibold;
+    src: url(../fonts/raleway-semibold.ttf);
+}
+@font-face {
+    font-family: raleway-extrabold;
+    src: url(../fonts/raleway-extrabold.ttf);
+}
+@font-face {
+    font-family: montserrat-light;
+    src: url(../fonts/montserrat-light.ttf);
+}
  .body-index {
      max-width: 1920px;
      margin: 0 auto;
-     font-family: Raleway-ExtraBold,AdobeInvisFont,MyriadPro-Regular;
+     font-family: raleway-extrabold, verdana, sans-serif;
  }
 
 
@@ -53,7 +73,7 @@
     text-decoration: none;
     color: #FFFFFF;  
     font-size: 34px;
-    font-family: Raleway-Regular,AdobeInvisFont,MyriadPro-Regular;
+    font-family: raleway-regular, verdana, sans-serif;
 }
 .main-header-top-nav {
     padding-left: 220px;
@@ -66,7 +86,7 @@
     padding: 0;
 }
 .main-header-top-nav-list {
-    font-family: Raleway-Medium,Montserrat-Light,AdobeInvisFont,MyriadPro-Regular;
+    font-family: raleway-medium, montserrat-light, verdana, sans-serif;
     font-size: 14px;
     text-decoration: none;
     padding-right: 30px;
@@ -110,23 +130,40 @@
 .main-header-top-basket:active .top-basket {
     color: #39241A;
 }
-.main-header-top-search {
-    background-color: transparent;
-    background-image: url(../img/header-search.png);
+.main-header-top-search-form {
     width: 25px;
     height: 25px;
     margin-top: 62px;
     padding: 0;
-    border: none;
-    outline: none;
+    position: relative;
+}
+.main-header-top-search-lable {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/header-search.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
+.main-header-top-search {
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    margin-top: 55px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: -14px;
+    left: -260px;
+}
 input[type="search"]:focus {
     width: 300px;
-    transition: width 1s ease-out;
+    min-height: 40px;
+    transition: width 1s ease;
     background-position: right;
-    background-color: #949496;
+    border: 3px solid #C7B299;
+    background-color: transparent;
 }
 .main-header-bottom {
     display: flex;
@@ -167,20 +204,20 @@ input[type="search"]:focus {
 .main-header-bottom-title-desigion {
     color: #FFFFFF;
     font-size: 36px;
-    font-family: Raleway-ExtraBold,Raleway-Medium,AdobeInvisFont,MyriadPro-Regular;
+    font-family: raleway-regular, montserrat-light, verdana, sans-serif;
     margin: 0;    
 }
 .main-header-bottom-title-portfolio {
     color: #FFFFFF;
     font-size: 52px;
-    font-family: Raleway-ExtraBold,AdobeInvisFont,MyriadPro-Regular;
+    font-family: raleway-extrabold, montserrat-light, verdana, sans-serif;
     margin: 0;
     padding: 15px 0 20px;
 }
 .main-header-bottom-text {
     color: #FFFFFF;
     font-size: 14px;
-    font-family: Montserrat-Light,Raleway-Regular,AdobeInvisFont,MyriadPro-Regular;
+    font-family: montserrat-light, raleway-medium, verdana, sans-serif;
     margin: 0 0 75px 0;
     max-width: 560px;
 }
@@ -207,10 +244,6 @@ input[type="search"]:focus {
 .main-header-bottom-btn {
     display: flex;
     align-items: center;
-}
-.main-header-bottom-pagination {
-    display: flex;
-    width: 100%;
 }
 .btn-right::before {
     content: "";
@@ -247,19 +280,18 @@ input[type="search"]:focus {
   }
 .main-header-bottom-pagination {
     display: flex;
-    justify-content: center;
     justify-content: space-between;
-    width: 90px;
+    width: 100px;
     margin: 0 300px 30px 300px;
-    padding: 0;
-    list-style-type: none;
+    
   }
 .pagination-item {
     display: block;
-    width: 12px;
-    height: 12px;
+    width: 6px;
+    height: 6px;
     background-color: #8F9092;
     border-radius: 50%;
+    border: 2px solid transparent;
   }
 .pagination-item:hover {
     background-color: transparent;
@@ -306,14 +338,14 @@ input[type="search"]:focus {
 }
 .design-title {
     color: #555555;
-    font-family: Raleway-SemiBold,Raleway-Bold,AdobeInvisFont,MyriadPro-Regular;
+    font-family: raleway-semibold, montserrat-light, verdana, sans-serif;
     font-size: 22px;
     margin: 0;
     padding: 30px 0 20px;
 }
 .text {
     color: #8F8F8F;
-    font-family: Montserrat-Light,Raleway-Bold,AdobeInvisFont,MyriadPro-Regular;
+    font-family: montserrat-light, raleway-medium, verdana, sans-serif;
     font-size: 16px;
     margin: 0;
 }
@@ -330,7 +362,7 @@ input[type="search"]:focus {
     background-color: #FBFAF8;
 }
 .realization-title {
-    font-family: Raleway-SemiBold,Raleway-Medium,AdobeInvisFont,MyriadPro-Regular;
+    font-family: raleway-semibold, montserrat-light, verdana, sans-serif;
     font-size: 30px;
     text-align: center;
     color: #555555;
@@ -367,7 +399,7 @@ input[type="search"]:focus {
 .multipurpose-title {
     margin: 0;
     color: #FFFFFF;
-    font-family: Raleway-Medium,Raleway-Regular,AdobeInvisFont,MyriadPro-Regular;
+    font-family: raleway-medium, montserrat-light, verdana, sans-serif;
     font-size: 28px;
     padding: 50px 0 8px;
 }
@@ -377,7 +409,7 @@ input[type="search"]:focus {
 .multipurpose-text {
     margin: 0;
     color: #605654;
-    font-family: Raleway-Medium,Montserrat-Light,AdobeInvisFont,MyriadPro-Regular;
+    font-family: raleway-medium, montserrat-light, verdana, sans-serif;
     font-size: 18px;
     padding-bottom: 50px;
 }

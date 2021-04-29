@@ -3,7 +3,7 @@
 2.main
     2.2 realization
     2.3.multipurpose
-    2.4.
+    2.4 latest
     2.5.
 3.footer
  */
@@ -27,7 +27,20 @@
     font-family: montserrat-light;
     src: url(../fonts/montserrat-light.ttf);
 }
- .body-index {
+@keyframes anim {
+    30% {
+        background-image: url(../img/browser-left@1X.png), url(../img/browser-center@1X.png), url(../img/browser-right@1X.png);
+        background-size: 60%, 40%, 50%;
+    } 
+    60% {
+        background-image: url(../img/browser-right@1X.png), url(../img/browser-left@1X.png), url(../img/browser-center@1X.png);
+        background-size: 60%, 50%, 40%;
+    }
+    90% {
+        background-image: url(../img/browser-center@1X.png), url(../img/browser-left@1X.png), url(../img/browser-right@1X.png);
+    }
+}
+.body-index {
      max-width: 1920px;
      margin: 0 auto;
      font-family: raleway-extrabold, verdana, sans-serif;
@@ -164,6 +177,7 @@ input[type="search"]:focus {
     background-position: right;
     border: 3px solid #C7B299;
     background-color: transparent;
+    color: #C7B299;
 }
 .main-header-bottom {
     display: flex;
@@ -295,7 +309,7 @@ input[type="search"]:focus {
   }
 .pagination-item:hover {
     background-color: transparent;
-    border: 2px solid #D0C0AC;
+    border: 2px solid #a89f93;
     transform: scale(1.2)
 }
 
@@ -344,7 +358,7 @@ input[type="search"]:focus {
     padding: 30px 0 20px;
 }
 .text {
-    color: #8F8F8F;
+    color: #8C8C8C;
     font-family: montserrat-light, raleway-medium, verdana, sans-serif;
     font-size: 16px;
     margin: 0;
@@ -370,7 +384,7 @@ input[type="search"]:focus {
     padding: 84px 0 24px;
 }
 .realization-text {
-    width: 750px;
+    max-width: 750px;
     margin: 0 auto;
     text-align: center;
 }
@@ -382,10 +396,12 @@ input[type="search"]:focus {
     background-position: bottom center, bottom left, bottom right;
     background-size: 51%, 50%, 50%;
     margin: 0 auto;
+    animation: anim 3 20s;
+    transition: background-image 5s;
+    animation-iteration-count: infinite;
 }
 .realization-img:hover {
-    background-image: url(../img/browser-left@1X.png), url(../img/browser-center@1X.png), url(../img/browser-right@1X.png);
-    background-size: 60%, 40%, 50%;
+    animation-play-state: paused;
 }
 
 /* ==========================================================  2.3 multipurpose  ========================================================== */
@@ -431,3 +447,50 @@ input[type="search"]:focus {
     background-color: #4D4643;
     color: #998675;
 }   
+
+
+/* ==========================================================  2.4 latest  ========================================================== */
+
+
+.latest {
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+.latest-menu {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 40px auto;
+}
+.latest-menu-link {
+    padding: 11px 25px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #8C8C8C;
+    background-color: #FFFFFF;
+    border: 1px solid #EBEBEB; 
+    border-radius: 3px;
+}
+.latest-link1:hover,
+.latest-link2:hover,
+.latest-link3:hover,
+.latest-link4:hover,
+.latest-link5:hover {
+background-color: #998675;
+color: #FFFFFF;
+border: 1px solid #998675;
+}
+.latest-link1:active,
+.latest-link2:active,
+.latest-link3:active,
+.latest-link4:active,
+.latest-link5:active{
+background-color:  #39241A;
+border: 1px solid  #998675;
+color: #998675;
+}
+.latest-menu-aticle {
+    display: block;
+    flex-wrap: wrap;
+}

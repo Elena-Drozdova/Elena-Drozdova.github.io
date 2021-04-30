@@ -4,7 +4,7 @@
     2.2 realization
     2.3.multipurpose
     2.4 latest
-    2.5.
+    2.5 video
 3.footer
  */
  @font-face {
@@ -395,9 +395,8 @@ input[type="search"]:focus {
     background-repeat: no-repeat;
     background-position: bottom center, bottom left, bottom right;
     background-size: 51%, 50%, 50%;
-    margin: 0 auto;
-    animation: anim 3 20s;
-    transition: background-image 5s;
+    margin: 0 auto 4px auto;
+    animation: anim 15s;
     animation-iteration-count: infinite;
 }
 .realization-img:hover {
@@ -436,6 +435,7 @@ input[type="search"]:focus {
     text-decoration: none;
     background-color: #998675;
     padding: 15px 22px;
+    box-sizing: border-box;
     border-bottom: 3px solid #736257;
     border-radius: 5px;
 }
@@ -453,7 +453,7 @@ input[type="search"]:focus {
 
 
 .latest {
-    max-width: 1300px;
+    max-width: 1250px;
     margin: 0 auto;
     background-color: #FFFFFF;
 }
@@ -477,20 +477,145 @@ input[type="search"]:focus {
 .latest-link3:hover,
 .latest-link4:hover,
 .latest-link5:hover {
-background-color: #998675;
-color: #FFFFFF;
-border: 1px solid #998675;
+    background-color: #998675;
+    color: #FFFFFF;
+    border: 1px solid #998675;
 }
 .latest-link1:active,
 .latest-link2:active,
 .latest-link3:active,
 .latest-link4:active,
 .latest-link5:active{
-background-color:  #39241A;
-border: 1px solid  #998675;
-color: #998675;
+    background-color:  #39241A;
+    border: 1px solid  #998675;
+    color: #998675;
 }
-.latest-menu-aticle {
-    display: block;
+.latest-all-article {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
+.latest-article {
+    margin-bottom: 30px;
+    position: relative;
+}
+.latest-article-img {
+    display: block;
+    width: 100%;
+}
+.latest-article:hover .latest-article-img {
+    filter: brightness(42%);
+}
+.latest-article-text {
+    background-color: #FBFAF8;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.latest-article:hover .latest-article-text {
+    background-color: #362F2D;
+}
+.latest-article-text::before {
+    content: "";
+    border: 19px solid transparent; 
+    border-bottom: 15px solid #fbf8fa;
+    position: absolute;
+    bottom: 115px;
+    left: 18px;
+}
+.latest-article:hover .latest-article-text::before {
+    border-bottom: 15px solid #362F2D;
+}
+.latest-article-header {
+    margin: 0 0 14px 0;
+    font-family: raleway-medium, montserrat-light, verdana, sans-serif;
+    font-size: 20px;
+    color: #C7B299;
+}
+.latest-article:hover .latest-article-header {
+    color: #FFFFFF;
+}
+.latest-article-span {
+    font-family: montserrat-light, raleway-medium, verdana, sans-serif;
+    font-size: 14px;
+    color: #d1d1d1;
+}
+.latest-article:hover .latest-article-span {
+    color: #C7B299;
+}
+/* ==============  hide  ================= */
+.latest-button-link {
+    position: absolute;
+    bottom: 216px;
+    right: 200px;
+    background: none;
+    border: none;
+    fill: #C7B299;
+    display: none;
+}
+.latest-button-search {
+    position: absolute;
+    bottom: 216px;
+    right: 137px;
+    background: none;
+    border: none;
+    fill: #FFFFFF;
+    display: none;
+}
+/* ===================  hide  =================== */
+.latest-article:hover .latest-button-link {
+    display: block;
+}
+.latest-article:hover .latest-button-search {
+    display: block;
+}
+.latest-article:hover .latest-button-link:hover {
+    background: #FFFFFF;
+    border: 1px solid #C7B299;
+    border-radius: 5px;
+}
+.latest-article:hover .latest-button-link:active {
+    background: #C7B299;
+    border: 1px solid #362F2D;
+    border-radius: 5px;
+    fill: #362F2D;
+}
+.latest-article:hover .latest-button-search:hover {
+    background: #C7B299;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+}
+.latest-article:hover .latest-button-search:active {
+    background: #362F2D;
+    border: 1px solid #C7B299;
+    border-radius: 5px;
+    fill: #C7B299;
+}
+.latest-button-load {
+    display: block;
+    margin: 0 auto;
+    align-self: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #998675;
+    padding: 20px 45px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 3px solid #736257;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: raleway-extrabold, montserrat-light, verdana, sans-serif;
+    margin-bottom: 80px;
+}
+.latest-button-load:hover {
+    background-color: #FFFFFF;
+    color: #998675;
+}
+.latest-button-load:active {
+    background-color: #4D4643;
+    color: #998675;
+}
+
+
+/* ==========================================================  2.5 video  ========================================================== */
+
+

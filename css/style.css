@@ -49,6 +49,10 @@
         background-image: url(../img/browser-center@1X.png), url(../img/browser-left@1X.png), url(../img/browser-right@1X.png);
     }
 }
+.html {
+    margin: 0;
+    padding: 0;
+}
 .body-index {
      max-width: 1920px;
      margin: 0 auto;
@@ -1253,7 +1257,7 @@ hr {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-left: 10px;
+    margin: 0 10px;
 }
 .main-header-top-nav {
     display: none;
@@ -1449,10 +1453,9 @@ input[type="checkbox"]:checked ~ .mob-menu-list .mob-menu-list-item-link {
     padding: 20px 0;
 }
 .footer-copy-list {
-    font-size: 12px;
+    font-size: 8px;
 }
 .footer-copy-list:first-child {
     margin-bottom: 10px;
-    font-size: 12px;
 }
 }

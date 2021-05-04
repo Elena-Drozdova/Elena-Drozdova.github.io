@@ -10,6 +10,7 @@
     2.8 recent
     2.9 partners
 3.footer
+4.media
  */
  @font-face {
      font-family: raleway-regular;
@@ -193,6 +194,84 @@ input[type="search"]:focus {
     background-color: transparent;
     color: #C7B299;
 }
+
+/* ==============  hide  ================= */
+
+.mob-menu {
+    width: calc(98% - 181px);
+    max-width: 570px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    display: none;
+}
+.mob-menu-btn {
+    display: none;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+.mob-menu-btn:hover span,
+.mob-menu-btn:hover span:before,
+.mob-menu-btn:hover span:after {
+    background-color: #C7B299;
+}
+.mob-menu-btn:active span,
+.mob-menu-btn:active span:before,
+.mob-menu-btn:active span:after {
+    background-color: #39241A;
+}
+.mob-menu-btn span {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 3px;
+    background-color: #C7B299;
+    position: relative;
+}
+.mob-menu-btn span:before,
+.mob-menu-btn span:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #FFFFFF;
+    position: absolute;
+}
+.mob-menu-btn span:before {
+    top: -10px;
+}
+.mob-menu-btn span:after {
+    top: 10px;
+}
+#mob-menu {
+    display: none;
+  }
+.mob-menu-list {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    min-height: 60px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+.mob-menu-list-item {
+    display: flex;
+    align-items: center;
+}
+.mob-menu-list-item-link {
+    font-family: raleway-medium, montserrat-light, verdana, sans-serif;
+    line-height: 25px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+  
+/* ==============  hide/end  ================= */
+
 .main-header-bottom {
     display: flex;
     justify-content: space-between;
@@ -336,6 +415,7 @@ input[type="search"]:focus {
 .design {
     display: flex;
     justify-content: center;
+    /* flex-wrap: wrap; */
     background-color: #FFFFFF; 
 }
 .design-card {
@@ -946,6 +1026,7 @@ input[type="search"]:focus {
     background-size: cover;
     background-color: #32373D;
     padding: 140px 0;
+    box-sizing: border-box;
     background-position: center;
     display: flex;
     justify-content: space-evenly;
@@ -1117,7 +1198,7 @@ hr {
     list-style-type: none;
     font-size: 13px;
     margin: 0; 
-    padding:0;  
+    padding: 0;  
 }
 .copy {
     color: #4F4F4F;
@@ -1158,4 +1239,220 @@ hr {
 }
 .footer-copy-list-link:last-child {
     border-left: 1px solid #1E1E1E;
+}
+
+
+ /* ==========================================================  4. media  ========================================================== */
+
+
+@media (max-width: 576px) {
+.main-header {
+    padding: 10px 0;
+}
+.main-header-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+.main-header-top-nav {
+    display: none;
+}
+.main-header-top-basket {
+    display: none;
+}
+.main-header-top-search-form {
+    display: none;
+}
+.mob-menu {
+    width: 17%;
+    display: block;
+}
+.mob-menu-btn {
+    display: flex;
+}
+.mob-menu-list {
+    min-height: 0;
+    flex-wrap: wrap;
+    visibility: hidden;
+}
+.mob-menu-list-item {
+    width: 100%;
+}
+.mob-menu-list-item-link {
+    height: 0;
+}
+input[type="checkbox"]:checked ~ .mob-menu-list {
+    visibility: visible;
+    height: auto;
+}
+input[type="checkbox"]:checked ~ .mob-menu-list .mob-menu-list-item-link {
+    height: auto;
+}
+.main-header-bottom {
+    justify-content: center;
+    margin: 30px 0;
+}
+.main-header-bottom-btn {
+    display: none;
+}
+.main-header-bottom-btn {}
+.main-header-bottom-title-desigion {
+    font-size: 20px;
+}
+.main-header-bottom-title-portfolio {
+    font-size: 26px;
+    padding: 5px 0 10px;
+}
+.main-header-bottom-text {
+    font-size: 14px;
+    margin: 0;
+    max-width: 350px;
+}
+.main-header-bottom-started {
+    display: none;
+}
+.main-header-bottom-pagination {
+    display: none;
+}
+/* ==================== main design ===================== */
+.design {
+    flex-wrap: wrap;
+}
+.design-card {
+    margin: 40px 10px 60px;
+    max-width: 200px;
+}
+.design-card:after {
+    content: "";
+    top: 170px;
+}
+.design-title {
+    font-size: 18px;
+    padding: 10px 0;
+}
+.design-text {
+    font-size: 10px;
+    max-width: 150px;
+}
+/* ============= realization multipurpose ============ */
+.realization-title {
+    font-size: 20px;
+    padding: 40px 0 24px;
+}
+.realization-text {
+    max-width: 500px;
+    font-size: 14px;
+}
+.realization-img {
+    min-height: 160px;
+}
+.multipurpose {
+    flex-direction: column;
+    align-items: center;
+}
+.multipurpose-title {
+    font-size: 20px;
+    padding: 40px 0 8px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.multipurpose-text {
+    font-size: 14px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.multipurpose-link {
+    text-transform: uppercase;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+/* ==================== latest video ===================== */
+.latest-menu {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0;
+}
+.latest-menu-link {
+    padding: 8px 15px;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+.latest-button-load {
+    padding: 15px 40px; 
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+.presentation-video-text {
+    display: none;
+}
+/* ================= excellent statistics ================== */
+.excellent-img {
+    display: none;
+}
+.excellent-article {
+    max-width: 500px;
+    margin-top: 40px;
+}
+.excellent-title {
+    font-size: 22px;
+    padding: 0 0 10px;
+    text-align: center;
+}
+.excellent-text {
+    text-align: center;
+    font-size: 12px;
+}
+.excellent-list {
+    font-size: 14px;
+    line-height: 28px;
+    margin: 29px 0 40px 60px;
+}
+.statistics {
+    flex-wrap: wrap;
+}
+.statistics-card {
+    margin: 40px 20px 70px;
+}
+.statistics-card:after {
+    content: "";
+    top: 170px;
+}
+.statistics-number {
+    font-size: 38px;
+    margin: 20px 0 15px;
+}
+/* ================= recent partners ================== */
+.recent-text {
+    max-width: 500px;
+    font-size: 14px;
+}
+.recent-menu {
+    margin-bottom: 40px;
+}
+.partners {
+    flex-wrap: wrap;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+.partners-img {
+    margin-bottom: 30px;
+}
+/* ================= footer ================== */
+.top-footer {
+    display: none;
+}
+.bottom-footer {
+    flex-direction: column;
+    padding: 20px 0;
+}
+.footer-copy-list {
+    font-size: 12px;
+}
+.footer-copy-list:first-child {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
 }

@@ -1257,7 +1257,7 @@ hr {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 10px;
+    margin: 0;
 }
 .main-header-top-nav {
     display: none;
@@ -1445,6 +1445,9 @@ input[type="checkbox"]:checked ~ .mob-menu-list .mob-menu-list-item-link {
     margin-bottom: 30px;
 }
 /* ================= footer ================== */
+.main-footer {
+    padding: 0;
+}
 .top-footer {
     display: none;
 }
